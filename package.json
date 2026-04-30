@@ -1,6 +1,6 @@
 {
-  "name": "uj",
-  "version": "0.1.0",
+  "name": "uj-json",
+  "version": "0.1.1",
   "description": "A tiny JSON wrapper with optional standardization and diffing.",
   "keywords": [
     "json",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uj-format/uj.git"
+    "url": "git+https://github.com/nizmogizmo6969/uj-universal-json.git"
   },
   "engines": {
     "node": ">=18"

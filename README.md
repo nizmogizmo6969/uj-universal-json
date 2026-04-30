@@ -1,6 +1,6 @@
 # UJ — Universal JSON
 
-A tiny JSON wrapper with optional standardization and diffing for predictable payloads.
+A tiny JSON wrapper with optional standardization and diffing.
 
 ## What is UJ?
 
@@ -19,13 +19,13 @@ You can also include optional `schema` and `meta` fields when useful. UJ provide
 ## Install
 
 ```sh
-npm install uj
+npm install uj-json
 ```
 
 ## Basic usage
 
 ```ts
-import { create, canonicalize, diff, is, unwrap } from "uj";
+import { create, canonicalize, diff, is, unwrap } from "uj-json";
 
 const event = create("user.created", { name: "  Alice  " });
 
@@ -96,11 +96,11 @@ console.log(changes);
 
 Example output:
 
-```json
+```ts
 [
-  { "path": "/count", "from": null, "to": 1, "op": "add" },
-  { "path": "/status", "from": "draft", "to": "active", "op": "replace" },
-  { "path": "/user/name", "from": "Alice", "to": "Ada", "op": "replace" }
+  { path: "/count", from: undefined, to: 1, op: "add" },
+  { path: "/status", from: "draft", to: "active", op: "replace" },
+  { path: "/user/name", from: "Alice", to: "Ada", op: "replace" }
 ]
 ```
 
@@ -165,7 +165,7 @@ interface UJChange {
 
 ## Event type note
 
-UJ recommends type names like `"domain.action"` (for example `"user.created"`). UJ does not validate or enforce this format in v0.1.0.
+UJ recommends type names like `"domain.action"` (for example `"user.created"`). UJ does not validate or enforce this format.
 
 ## Object Prototype Behavior
 

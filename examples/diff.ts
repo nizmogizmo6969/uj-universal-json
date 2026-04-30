@@ -1,4 +1,4 @@
-import { diff } from "uj";
+import { diff } from "uj-json";
 
 const changes = diff(
   { theme: "light", notifications: { email: true }, shortcuts: ["save"] },

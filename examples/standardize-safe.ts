@@ -1,4 +1,4 @@
-import { create } from "uj";
+import { create } from "uj-json";
 
 const event = create(
   "profile.submitted",

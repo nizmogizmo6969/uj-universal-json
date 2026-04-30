@@ -1,4 +1,4 @@
-import { create, is, unwrap } from "uj";
+import { create, is, unwrap } from "uj-json";
 
 const apiResponse = { id: 1, name: "Alice" };
 const event = create("api.response", apiResponse);

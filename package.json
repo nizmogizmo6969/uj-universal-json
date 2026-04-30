@@ -1,0 +1,47 @@
+{
+  "name": "uj",
+  "version": "0.1.0",
+  "description": "A tiny JSON wrapper with optional standardization and diffing.",
+  "keywords": [
+    "json",
+    "wrapper",
+    "standardization",
+    "typescript",
+    "sdk"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uj-format/uj.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev:test": "vitest",
+    "examples": "npm run build && tsc --noEmit -p tsconfig.examples.json",
+    "smoke": "npm run build && node smoke/consumer.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.5"
+  }
+}

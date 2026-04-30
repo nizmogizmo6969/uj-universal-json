@@ -1,6 +1,6 @@
 # UJ — Universal JSON
 
-A tiny JSON wrapper with optional standardization and diffing.
+A tiny JSON wrapper with optional standardization and diffing for predictable payloads.
 
 ## What is UJ?
 
